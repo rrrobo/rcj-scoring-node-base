@@ -1,0 +1,2 @@
+#! /bin/bash
+sudo docker run -d --name rcj-scoring-japan -p 3000:80  -v "$(pwd)"/db:/data/db -v "$(pwd)"/logs:/opt/rcj-scoring-system/logs -v "$(pwd)"/TechnicalDocument:/opt/rcj-scoring-system/TechnicalDocument --restart=always ryorobo/rcj-rescue-scoring-japan
