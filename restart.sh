@@ -1,3 +1,3 @@
 #! /bin/bash
-echo "Dockerコンテナを停止します"
+echo "Dockerコンテナを再起動します"
 sudo docker restart rcj-scoring-japan
