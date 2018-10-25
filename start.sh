@@ -1,3 +1,3 @@
 #! /bin/bash
-echo "Dockerコンテナを停止します"
+echo "Dockerコンテナを開始します"
 sudo docker start rcj-scoring-japan
