@@ -19,6 +19,7 @@ WORKDIR /opt/rcj-scoring-system
 
 RUN npm install && \
     npm install bower -g && \
+    npm install workbox-cli -g && \
     bower install --allow-root && \
     mkdir logs && \
     mkdir /data/db -p
@@ -27,7 +28,3 @@ WORKDIR /
 COPY ./docker/start.sh /start.sh
 RUN chmod +x start.sh && \
     yum remove -y cmake wget git
-
-ENTRYPOINT ["/start.sh"]
-
-EXPOSE 80
