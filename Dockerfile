@@ -15,6 +15,7 @@ RUN set -x && \
 RUN mkdir -p /opt/raj-scoring-system
 COPY ./package.json /opt/rcj-scoring-system/package.json
 COPY ./bower.json /opt/rcj-scoring-system/bower.json
+COPY ./.bowerrc /opt/rcj-scoring-system/.bowerrc
 WORKDIR /opt/rcj-scoring-system
 
 RUN npm install && \
