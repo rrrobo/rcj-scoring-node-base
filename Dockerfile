@@ -28,4 +28,4 @@ RUN npm install && \
 WORKDIR /
 COPY ./docker/start.sh /start.sh
 RUN chmod +x start.sh && \
-    yum remove -y cmake wget git
+    yum remove -y cmake wget git make gcc-c++
