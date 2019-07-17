@@ -46,7 +46,8 @@
     "qr_reader": "https://github.com/sitepoint-editors/jsqrcode.git",
     "jquery-qrcode": "https://github.com/jeromeetienne/jquery-qrcode.git",
     "angular-color-picker": "angularjs-color-picker#^3.4.8",
-    "angular-sanitize": "^1.7.8"
+    "angular-sanitize": "^1.7.8",
+    "html2canvas": "https://html2canvas.hertzen.com/dist/html2canvas.min.js"
   },
   "description": "",
   "main": "",

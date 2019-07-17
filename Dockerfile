@@ -12,7 +12,7 @@ RUN set -x && \
     curl -sL https://rpm.nodesource.com/setup_10.x | bash - && \
     yum install nodejs -y
 
-RUN mkdir -p /opt/raj-scoring-system
+RUN mkdir -p /opt/rcj-scoring-system
 COPY ./package.json /opt/rcj-scoring-system/package.json
 COPY ./bower.json /opt/rcj-scoring-system/bower.json
 COPY ./.bowerrc /opt/rcj-scoring-system/.bowerrc
@@ -23,7 +23,9 @@ RUN npm install && \
     npm install workbox-cli -g && \
     bower install --allow-root && \
     mkdir logs && \
-    mkdir /data/db -p
+    mkdir /data/db -p && \
+    mkdir -p /opt/rcj-scoring-system/tmp/course && \
+    mkdir -p /opt/rcj-scoring-system/tmp/uploads
 
 WORKDIR /
 COPY ./docker/start.sh /start.sh
