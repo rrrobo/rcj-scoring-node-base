@@ -25,6 +25,8 @@
     "extract-zip": "^1.6.7",
     "file-type": "^10.7.0",
     "fs-extra": "^7.0.1",
+    "glob": "^7.1.4",
+    "guesslanguage": "^0.2.0",
     "jsdoc": "^3.5.5",
     "jsonfile": "^5.0.0",
     "jsqr": "^1.1.1",
