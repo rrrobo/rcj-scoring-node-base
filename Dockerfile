@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:8
 MAINTAINER ryorobo <rrrobo@icloud.com>
 
 COPY ./docker/nginx.repo /etc/yum.repos.d/nginx.repo
@@ -6,11 +6,16 @@ COPY ./docker/mongodb.repo /etc/yum.repos.d/mongodb.repo
 COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 
 RUN set -x && \
-    yum update -y && \
-    yum install -y nginx mongodb-org && \
-    yum install gcc-c++ make cmake git python wget -y && \
-    curl -sL https://rpm.nodesource.com/setup_10.x | bash - && \
-    yum install nodejs -y
+    dnf update -y && \
+    dnf install -y nginx mongodb-org && \
+    dnf install git wget -y && \
+    curl -sL https://rpm.nodesource.com/setup_14.x | bash - && \
+    dnf install -y nodejs epel-release dnf-plugins-core && \
+    dnf config-manager --set-enabled PowerTools && \
+    dnf config-manager --set-enabled epel-playground && \
+    rpm -ivh https://download1.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm && \
+    dnf install -y ffmpeg
+
 
 RUN mkdir -p /opt/rcj-scoring-system
 COPY ./package.json /opt/rcj-scoring-system/package.json
@@ -30,4 +35,4 @@ RUN npm install && \
 WORKDIR /
 COPY ./docker/start.sh /start.sh
 RUN chmod +x start.sh && \
-    yum remove -y wget git
+    dnf remove -y wget git
