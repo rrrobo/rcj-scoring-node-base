@@ -46,8 +46,7 @@
     "socket.io-client": "^2.3.0",
     "sweetalert2": "^7.28.11",
     "tether": "^1.4.7",
-    "video.js": "https://github.com/videojs/video.js/releases/download/v7.10.2/video-js-7.10.2.zip",
-    "videojs-themes": "https://github.com/videojs/themes.git"
+    "jquery-ui": "^1.12.1"
   },
   "description": "",
   "homepage": "https://gitlab.ida.liu.se/sebgu182",
