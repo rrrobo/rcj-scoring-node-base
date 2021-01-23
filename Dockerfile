@@ -17,11 +17,11 @@ RUN set -x && \
     dnf install -y ffmpeg
 
 
-RUN mkdir -p /opt/rcj-cms
-COPY ./package.json /opt/rcj-cms/package.json
-COPY ./bower.json /opt/rcj-cms/bower.json
-COPY ./.bowerrc /opt/rcj-cms/.bowerrc
-WORKDIR /opt/rcj-cms
+RUN mkdir -p /opt/rcj-scoring-system
+COPY ./package.json /opt/rcj-scoring-system/package.json
+COPY ./bower.json /opt/rcj-scoring-system/bower.json
+COPY ./.bowerrc /opt/rcj-scoring-system/.bowerrc
+WORKDIR /opt/rcj-scoring-system
 
 RUN npm install && \
     npm install bower -g && \
@@ -29,8 +29,8 @@ RUN npm install && \
     bower install --allow-root && \
     mkdir logs && \
     mkdir /data/db -p && \
-    mkdir -p /opt/rcj-cms/tmp/course && \
-    mkdir -p /opt/rcj-cms/tmp/uploads
+    mkdir -p /opt/rcj-scoring-system/tmp/course && \
+    mkdir -p /opt/rcj-scoring-system/tmp/uploads
 
 WORKDIR /
 COPY ./docker/start.sh /start.sh
