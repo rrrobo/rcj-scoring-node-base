@@ -1,5 +1,4 @@
 FROM centos:8
-MAINTAINER ryorobo <rrrobo@icloud.com>
 
 COPY ./docker/nginx.repo /etc/yum.repos.d/nginx.repo
 COPY ./docker/mongodb.repo /etc/yum.repos.d/mongodb.repo
