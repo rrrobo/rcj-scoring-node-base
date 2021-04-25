@@ -1,6 +1,3 @@
 #! /bin/bash
-nginx
-mongod --fork --logpath /opt/rcj-scoring-system/logs/mongod.log
-cd /opt/rcj-scoring-system
-sleep 5
+cd /opt/rcj-cms
 node server.js

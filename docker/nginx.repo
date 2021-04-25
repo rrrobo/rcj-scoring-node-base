@@ -1,5 +1,0 @@
-[nginx]
-name=nginx repo
-baseurl=http://nginx.org/packages/centos/8/$basearch/
-gpgcheck=0
-enabled=1
