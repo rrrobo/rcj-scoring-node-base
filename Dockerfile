@@ -1,6 +1,6 @@
 FROM node:14-alpine
 
-RUN apk add --no-cache ffmpeg git
+RUN apk add --no-cache ffmpeg git zip unzip
 
 RUN mkdir -p /opt/rcj-cms
 COPY ./package.json /opt/rcj-cms/package.json
@@ -19,5 +19,4 @@ RUN npm install && \
 
 WORKDIR /
 COPY ./docker/start.sh /start.sh
-RUN chmod +x start.sh && \
-    dnf remove -y wget git
+RUN chmod +x start.sh
