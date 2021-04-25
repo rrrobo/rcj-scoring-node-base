@@ -39,9 +39,11 @@ jobs:
         uses: actions/cache@v2
         with:
           path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ matrix.distro }}-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ github.ref }}-${{ github.sha }}
           restore-keys: |
-            ${{ runner.os }}-buildx-${{ matrix.distro }}-
+            ${{ github.ref }}-${{ github.sha }}
+            ${{ github.ref }}
+            refs/head/main
       -
         name: Login to DockerHub
         if: github.event_name != 'pull_request'
