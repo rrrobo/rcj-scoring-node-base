@@ -1,6 +1,6 @@
 FROM node:14-alpine
 
-RUN apk add --no-cache ffmpeg
+RUN apk add --no-cache ffmpeg git
 
 RUN mkdir -p /opt/rcj-cms
 COPY ./package.json /opt/rcj-cms/package.json
