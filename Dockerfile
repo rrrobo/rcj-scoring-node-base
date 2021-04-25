@@ -8,12 +8,11 @@ COPY ./bower.json /opt/rcj-cms/bower.json
 COPY ./.bowerrc /opt/rcj-cms/.bowerrc
 WORKDIR /opt/rcj-cms
 
-RUN npm install && \
-    npm install bower -g && \
-    npm install workbox-cli -g && \
-    bower install --allow-root && \
-    mkdir logs && \
-    mkdir /data/db -p && \
+RUN npm install
+RUN npm install bower -g
+RUN npm install workbox-cli -g
+RUN bower install --allow-root
+RUN mkdir logs && \
     mkdir -p /opt/rcj-cms/tmp/course && \
     mkdir -p /opt/rcj-cms/tmp/uploads
 

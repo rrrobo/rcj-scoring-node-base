@@ -1,6 +1,6 @@
 {
   "authors": [
-    "Sebastian Gustavsson <segu182@student.liu.se>"
+    "rrrobo"
   ],
   "dependencies": {
     "alertifyjs": "~1.0.11",
@@ -26,7 +26,7 @@
     "css-toggle-switch": "^4.1.0",
     "datatables": "~1.10.19",
     "dateformat": "^1.0.0",
-    "fontawesome": "https://use.fontawesome.com/releases/v5.12.0/fontawesome-free-5.12.0-web.zip",
+    "fontawesome": "https://use.fontawesome.com/releases/v5.15.3/fontawesome-free-5.15.3-web.zip",
     "html2canvas": "https://html2canvas.hertzen.com/dist/html2canvas.min.js",
     "image-compressor": "https://github.com/fengyuanchen/compressorjs",
     "jSignature": "^2.1.3",
@@ -35,7 +35,7 @@
     "lightbox2": "^2.11.1",
     "ng-file-upload": "^12.2.13",
     "ngQuill": "ng-quill#^4.5.3",
-    "pdfjs": "https://github.com/mozilla/pdf.js/releases/download/v2.0.943/pdfjs-2.0.943-dist.zip",
+    "pdfjs": "https://github.com/mozilla/pdf.js/releases/download/v2.7.570/pdfjs-2.7.570-dist.zip",
     "popper.js": "^1.16.0",
     "qr_reader": "https://github.com/sitepoint-editors/jsqrcode.git",
     "quill": "https://cdn.quilljs.com/1.3.7/quill.js",
