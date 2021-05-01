@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:16-alpine
 RUN apk add --no-cache ffmpeg git zip unzip
 RUN mkdir -p /opt/rcj-cms
 WORKDIR /opt/rcj-cms
