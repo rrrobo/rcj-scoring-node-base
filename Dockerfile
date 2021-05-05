@@ -1,23 +1,6 @@
 FROM node:16-alpine
 RUN apk --update add --no-cache ffmpeg git zip unzip
-RUN apk add --no-cache --virtual build-dependencies wget \
-    alpine-sdk \
-    cmake \
-    clang \
-    shadow \
-    gcc \                                                                                         
-    musl-dev \                                                                                    
-    autoconf \                                                                                    
-    automake \                                                                                    
-    make \                                                                                        
-    libtool \                                                                                     
-    nasm \                                                                                        
-    tiff \                                                                                        
-    jpeg \                                                                                        
-    zlib \                                                                                        
-    zlib-dev \                                                                                    
-    file \                                                                                        
-    pkgconf
+RUN apk add --no-cache --virtual build-dependencies wget autoconf automake libtool make tiff jpeg zlib zlib-dev pkgconf nasm file gcc musl-dev
 RUN mkdir -p /opt/rcj-cms
 WORKDIR /opt/rcj-cms
 RUN wget https://raw.githubusercontent.com/rrrobo/rcj-rescue-scoring/master/package.json -O /opt/rcj-cms/package.json
