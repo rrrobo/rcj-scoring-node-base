@@ -1,5 +1,5 @@
 FROM node:16-alpine
-RUN apk add --no-cache ffmpeg git zip unzip wget
+RUN apk add --no-cache ffmpeg git zip unzip wget autoconf automake
 RUN mkdir -p /opt/rcj-cms
 WORKDIR /opt/rcj-cms
 RUN wget https://raw.githubusercontent.com/rrrobo/rcj-rescue-scoring/master/package.json -O /opt/rcj-cms/package.json
