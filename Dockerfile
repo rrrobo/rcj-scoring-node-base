@@ -4,7 +4,7 @@ RUN apk add --no-cache --virtual build-dependencies wget
 RUN mkdir -p /opt/rcj-cms
 WORKDIR /opt/rcj-cms
 RUN wget https://raw.githubusercontent.com/rrrobo/rcj-rescue-scoring/master/package.json -O /opt/rcj-cms/package.json
-RUN npm install mongo-express --ignore-scripts
+RUN wget https://raw.githubusercontent.com/rrrobo/rcj-rescue-scoring/master/package-lock.json -O /opt/rcj-cms/package-lock.json
 RUN npm install --production
 RUN npm install bower -g
 RUN wget https://raw.githubusercontent.com/rrrobo/rcj-rescue-scoring/master/bower.json -O /opt/rcj-cms/bower.json
