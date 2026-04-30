@@ -1,4 +1,4 @@
-FROM node:24-alpine
+FROM node:24
 RUN apk --update add --no-cache ffmpeg git zip unzip \
     cairo pango libjpeg-turbo giflib librsvg pixman freetype fontconfig ttf-dejavu
 RUN apk add --no-cache --virtual build-dependencies wget \
