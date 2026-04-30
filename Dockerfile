@@ -1,7 +1,7 @@
 FROM node:24
-RUN apk --update add --no-cache ffmpeg git zip unzip \
+RUN apt install ffmpeg git zip unzip \
     cairo pango libjpeg-turbo giflib librsvg pixman freetype fontconfig ttf-dejavu
-RUN apk add --no-cache --virtual build-dependencies wget \
+RUN apt install build-dependencies wget \
     build-base g++ python3 pkgconfig cairo-dev pango-dev libjpeg-turbo-dev giflib-dev librsvg-dev pixman-dev freetype-dev
 RUN mkdir -p /opt/rcj-cms
 WORKDIR /opt/rcj-cms
